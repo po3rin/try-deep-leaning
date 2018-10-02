@@ -13,7 +13,8 @@ build: ## build docker image.
 run: ## run docker comtainer.
 	docker run --name $(IMAGENAME) --rm -it -v $(shell pwd):/usr/src/app $(IMAGENAME) bash
 .PHONY: exec ## execute docker container.
-	docker exec -it batch--rm /bin/bash
+exec: ## exec docker container.
+	docker exec -it $(IMAGENAME) /bin/bash
 
 .PHONY: stop
 stop: ## stop container.
