@@ -12,3 +12,7 @@ batch_size = 10
 batch_mask = np.random.choice(train_size, batch_size)
 x_batch = x_train[batch_mask]
 t_train = t_train[batch_mask]
+
+print(batch_mask)
+print(x_batch)
+print(t_train)
